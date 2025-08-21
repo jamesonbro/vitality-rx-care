@@ -18,11 +18,17 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Medical professional variants
+        cta: "bg-accent text-accent-foreground hover:bg-accent-dark shadow-medium transition-all duration-300 hover:shadow-strong hover:scale-105",
+        hero: "bg-gradient-hero text-white border-0 shadow-strong hover:shadow-xl transition-all duration-500 hover:scale-105",
+        medical: "bg-primary text-primary-foreground border border-primary-light hover:bg-primary-dark shadow-soft",
+        trust: "bg-success text-success-foreground hover:bg-success/90 shadow-soft",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-md px-10 text-base font-semibold",
         icon: "h-10 w-10",
       },
     },

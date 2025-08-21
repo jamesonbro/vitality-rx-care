@@ -2,41 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* VitalityRx Design System - Professional Medical Platform
+All colors MUST be HSL for consistent theming.
 */
 
 @layer base {
   :root {
+    /* Core Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 100% 20%; /* Deep navy #003366 */
 
+    /* Medical Professional Color Palette */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 100% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 100% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Brand - Deep Medical Blue */
+    --primary: 210 100% 20%; /* #003366 */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 100% 85%;
+    --primary-dark: 210 100% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Clean Medical Gray */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 100% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones for backgrounds */
+    --muted: 210 20% 97%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Vitality Green */
+    --accent: 140 100% 40%; /* #00CC66 */
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 140 100% 90%;
+    --accent-dark: 140 100% 30%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Trust & Success indicators */
+    --success: 140 100% 40%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Destructive for warnings */
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
 
+    /* UI Elements */
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
+    --ring: 210 100% 20%;
+
+    /* Professional spacing and borders */
     --radius: 0.5rem;
+
+    /* Medical-grade shadows */
+    --shadow-soft: 0 2px 8px hsl(210 100% 20% / 0.05);
+    --shadow-medium: 0 4px 16px hsl(210 100% 20% / 0.1);
+    --shadow-strong: 0 8px 32px hsl(210 100% 20% / 0.15);
+
+    /* Trust gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 20%), hsl(210 100% 15%));
+    --gradient-accent: linear-gradient(135deg, hsl(140 100% 40%), hsl(140 100% 30%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 100% 20%), hsl(140 100% 40%));
+
+    /* Professional transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
