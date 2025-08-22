@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
@@ -20,37 +19,37 @@ const Footer = () => {
     {
       title: "Treatments",
       links: [
-        { name: "Erectile Dysfunction", href: "/treatments?category=ed" },
-        { name: "Sildenafil (Viagra)", href: "/treatments/sildenafil" },
-        { name: "Tadalafil (Cialis)", href: "/treatments/tadalafil" },
-        { name: "Compare Medications", href: "/treatments/compare" }
+        { name: "Erectile Dysfunction", href: "#treatments" },
+        { name: "Sildenafil (Viagra)", href: "#treatments" },
+        { name: "Tadalafil (Cialis)", href: "#treatments" },
+        { name: "Compare Medications", href: "#treatments" }
       ]
     },
     {
       title: "Company",
       links: [
-        { name: "About Us", href: "/about" },
-        { name: "How It Works", href: "/how-it-works" },
-        { name: "Our Doctors", href: "/doctors" },
-        { name: "Careers", href: "/careers" }
+        { name: "About Us", href: "#about" },
+        { name: "How It Works", href: "#how-it-works" },
+        { name: "Our Doctors", href: "#about" },
+        { name: "Careers", href: "#contact" }
       ]
     },
     {
       title: "Support",
       links: [
-        { name: "Help Center", href: "/help" },
-        { name: "Contact Us", href: "/contact" },
-        { name: "FAQ", href: "/faq" },
-        { name: "Order Status", href: "/order-status" }
+        { name: "Help Center", href: "#contact" },
+        { name: "Contact Us", href: "#contact" },
+        { name: "FAQ", href: "#contact" },
+        { name: "Order Status", href: "#contact" }
       ]
     },
     {
       title: "Legal",
       links: [
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Service", href: "/terms" },
-        { name: "Prescription Policy", href: "/prescription-policy" },
-        { name: "Refund Policy", href: "/refunds" }
+        { name: "Privacy Policy", href: "#contact" },
+        { name: "Terms of Service", href: "#contact" },
+        { name: "Prescription Policy", href: "#contact" },
+        { name: "Refund Policy", href: "#contact" }
       ]
     }
   ];
@@ -125,18 +124,18 @@ const Footer = () => {
           {footerSections.map((section) => (
             <div key={section.title}>
               <h4 className="font-semibold mb-4">{section.title}</h4>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link 
-                      to={link.href}
-                      className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+                <ul className="space-y-3">
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <a 
+                        href={link.href}
+                        className="text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm cursor-pointer"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
             </div>
           ))}
         </div>
